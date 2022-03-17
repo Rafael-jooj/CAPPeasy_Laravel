@@ -1,0 +1,26 @@
+*{
+	padding: 0;
+} 
+
+.centro{
+	margin: 40px auto;
+	float: right;
+	margin-right: 30px;
+}
+
+table{
+	width: 100%;
+	text-align: center;
+	display: inline-table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table th{
+	background-color: #DCDCDC;
+}
+
+table td p{
+	padding-top: 15px;
+}
+

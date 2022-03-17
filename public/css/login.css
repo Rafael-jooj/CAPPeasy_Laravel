@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*box-sizing: border-box;*/
+ 
+}
+
+.fundo{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(45deg, #4169E1, #1C1C1C 65%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.box{
+	width: 70%;
+	height: 80%;
+	display: flex;
+	justify-content: space-around;
+  	align-items: center;
+  	background: #fff;
+  	border-radius: 10px;
+  	float: center;
+}
+
+.img{
+	width: 250px;
+	height: 250px;
+	margin-left: 80px;
+}
+
+.img2{
+	width: 250px;
+	height: 250px;
+	margin-left: 80px;
+	margin-top: 75px;
+}
+
+/*.dados{
+	width: 50%;
+	line-height: 26px;
+}*/
+
+/*.padding{
+	padding: 0 15px;
+}*/
+
+.titulo{
+	font-size: 24px;
+  	font-weight: bold;
+  	text-align: center;
+  	margin-bottom: 30px;
+}
+
+.email{
+	position: relative;
+}
+
+.senha{
+	position: relative;
+}
+
+.link{
+	margin-left: 20%;
+}
+
+.linksenha{
+	margin-left: 30%;
+}
+
+/*.linkcad{
+	margin-left: 3%;
+}*/
+
+.submit{
+	background: #363636;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.submit:hover{
+	background: #1C1C1C;
+}
+
+input{
+	display: block;
+	width: 300px;
+    margin-bottom: 25px;
+  	height: 38px;
+  	border-radius: 10px;
+  	border: none;
+  	background: #DCDCDC;
+  	padding: 10px;
+  	font-size: 14px;
+  	position: relative;
+}
+
+a{
+	color: #4169E1;
+    position: relative;
+    margin-left: 50px;
+}
+
+a:hover{
+	color: #1C1C1C;
+}
+
+.link{
+	position: relative;
+	align-items: center;
+}
+
+.central{
+	margin: 0 auto;
+	width: 60%;
+	text-align: center;
+}
+
+
+/*estilo de projetos*/
+
+/*.nav_tabs{
+	width: 900px;
+	height: 400px;
+	margin: 100px auto;
+	position: relative;
+	background-color: #fff;
+}
+
+.nav_tabs ul{
+	list-style: none;
+}
+
+.nav_tabs ul li{
+	float: left;
+}
+
+.nav_tabs label{
+	width: 100px;
+	padding: 10px;
+	background-color: #DCDCDC;
+	display: block;
+	color: black;
+	cursor: pointer;
+	text-align: center;
+}
+
+.rd_tabs:checked ~ label{
+	background-color: #4169E1;
+	color: #fff;
+}
+
+.rd_tabs{
+	display: none;
+}
+
+.content{
+	background-color: #fff;
+	display: none;
+	position: absolute;
+	width: 900px;
+	height: 300px;
+	left: 0;
+}
+
+.rd_tabs:checked ~ .content{
+	display: block;
+}*/
