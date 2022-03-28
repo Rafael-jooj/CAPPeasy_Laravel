@@ -3,7 +3,9 @@
 use App\Http\Controllers\{
     PostController,
     HomeController,
-    ProjetosController
+    ProjetosController,
+    RevisorController,
+    GerenciadorController
 };
 
 use Illuminate\Support\Facades\Route;
@@ -19,8 +21,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 });
 
+Route::get('/', function () {
+    return view('auth.login');
+});
+
 Route::middleware(['auth'])->group(function(){
-    // Route::get('/home', [HomeController::class, 'home'])->name('site.home');
+    Route::get('/home', [HomeController::class, 'home'])->name('site.home');
     Route::get('/projeto/{id}', [ProjetosController::class, 'detalhes'])->name('site.detalhes');
     Route::get('/cadastrar', [HomeController::class, 'cadastrar'])->name('site.cadastrar');
     Route::get('/sobre', [HomeController::class, 'sobre'])->name('site.sobre');
@@ -29,16 +35,20 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/projetos', [ProjetosController::class, 'index'])->name('site.projetos');
 });
 
-Route::get('/', function () {
-    return view('auth.login');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/revisor', [RevisorController::class, 'index'])->name('revisor.revisor');
+    Route::get('/projetos-pendentes', [ProjetosController::class, 'projetosRevisor'])->name('revisor.projetos');
+    Route::get('/gerenciador', [GerenciadorController::class, 'index'])->name('gerenciador.gerenciador');
+    Route::get('/projetos-avaliação', [ProjetosController::class, 'projetosGerenciador'])->name('gerenciador.projetos');
 });
 
-Route::get('/home', function () {
-    return view('site.home');
-})->middleware(['auth'])->name('site.home');
+// Route::get('/home', function () {
+//     return view('site.home');
+// })->middleware(['auth'])->name('site.home');
+
+
+require __DIR__.'/auth.php';
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';

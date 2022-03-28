@@ -8,7 +8,7 @@
 <section>
     <nav class="nav_tabs">
       <ul>
-        <li> 
+        <li>
           <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
           <label for="tab1" id="tabela1">Descrição</label>
           <div class="content">
@@ -78,7 +78,7 @@
                       <img src="imagens/user.png" alt="" width="50px" height="50px">
                   </div>
                   <div style="padding: 10px; font-size: 15pt;">
-                      
+
                       <h5>Coordenador</h5>
                   </div>
               </div><br>

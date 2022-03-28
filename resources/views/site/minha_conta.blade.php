@@ -7,10 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/css/home.css">
 <link rel="stylesheet" type="text/css" href="/css/minha_conta.css">
 
-    <!-- <div class="topo">
-      <h3 class="centro text-white">Perfil do Usuário</h3>
-    </div> -->
-    
+    @if (Auth::user()->type_id == 1)
     <nav class="form_menu">
       <ul class="menu">
             <li>Minhas Ações >></li>
@@ -20,7 +17,8 @@
         </li>
       </ul>
     </nav>
- 
+    @endif
+
     <section class="container">
       <nav class="nav_campo">
         <div style="margin-left: 5%; margin-top: 20px;">

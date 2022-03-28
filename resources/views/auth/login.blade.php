@@ -48,7 +48,7 @@
                         {{ __('Esqueceu sua senha?') }}
                     </a>
                 @endif
-                    
+
                 <x-button class="ml-3">
                     {{ __('Entrar') }}
                 </x-button>
@@ -58,5 +58,5 @@
                 <a href="{{ url('/register') }}">Cadastre-se</a>
             </div>
         </form>
-    </x-auth-card> 
+    </x-auth-card>
 </x-guest-layout>

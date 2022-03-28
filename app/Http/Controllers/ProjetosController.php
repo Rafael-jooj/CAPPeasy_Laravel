@@ -39,4 +39,16 @@ class ProjetosController extends Controller
         return view('site.abaprojeto', compact('projeto'));
     }
 
+    public function projetosRevisor(){
+        $projetos = Projetos::get();
+
+        return view('revisor.projetosRevisor', compact('projetos'));
+    }
+
+    public function projetosGerenciador(){
+        $projetos = Projetos::get();
+
+        return view('gerenciador.projetosGerenciador', compact('projetos'));
+    }
+
 }

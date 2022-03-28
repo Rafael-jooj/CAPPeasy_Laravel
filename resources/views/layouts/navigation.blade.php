@@ -11,6 +11,7 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @if (Auth::user()->type_id == 1)
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('site.home')" :active="request()->routeIs('site.home')" class="text-white">
                         {{ __('Home') }}
@@ -28,6 +29,41 @@
                         {{ __('Minha Conta') }}
                     </x-nav-link>
                 </div>
+                @endif
+
+                @if (Auth::user()->type_id == 2)
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('revisor.revisor')" :active="request()->routeIs('revisor.revisor')" class="text-white">
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('site.sobre')" :active="request()->routeIs('site.sobre')" class="text-white">
+                        {{ __('Sobre Nós') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('site.conta')" :active="request()->routeIs('site.conta')" class="text-white">
+                        {{ __('Minha Conta') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('revisor.projetos')" :active="request()->routeIs('revisor.projetos')" class="text-white">
+                        {{ __('Projetos Pendentes') }}
+                    </x-nav-link>
+                </div>
+                @endif
+
+                @if (Auth::user()->type_id == 3)
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('gerenciador.gerenciador')" :active="request()->routeIs('gerenciador.gerenciador')" class="text-white">
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('site.sobre')" :active="request()->routeIs('site.sobre')" class="text-white">
+                        {{ __('Sobre Nós') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('site.conta')" :active="request()->routeIs('site.conta')" class="text-white">
+                        {{ __('Minha Conta') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('gerenciador.projetos')" :active="request()->routeIs('gerenciador.projetos')" class="text-white">
+                        {{ __('Projetos Pendentes') }}
+                    </x-nav-link>
+                </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->
