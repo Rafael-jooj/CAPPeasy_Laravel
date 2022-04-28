@@ -11,5 +11,5 @@ class Projetos extends Model
 
     protected $table = 'projetos';
 
-    protected $fillable = ['id_user', 'titulo', 'instituicao', 'grupo', 'grande_area', 'area_sec', 'palavras_chave', 'inicio', 'termino', 'pesq_humanos', 'pesq_animais', 'local', 'financiamento', 'valor', 'instituicao_fomento', 'objetivos'];
+    protected $fillable = ['id_user', 'titulo', 'instituicao', 'grupo', 'grande_area', 'area_sec', 'palavras_chave', 'inicio', 'termino', 'pesq_humanos', 'pesq_animais', 'local', 'financiamento', 'valor', 'instituicao_fomento', 'objetivos', 'file'];
 }

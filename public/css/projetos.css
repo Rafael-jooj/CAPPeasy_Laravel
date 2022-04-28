@@ -56,3 +56,7 @@
 	margin: 60px auto;
 	position: relative;
 }
+
+.arquivo{
+    max-width: 880px;
+}

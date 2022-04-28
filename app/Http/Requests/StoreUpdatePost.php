@@ -25,7 +25,8 @@ class StoreUpdatePost extends FormRequest
     {
         return [
             'title' => ['required', 'min:3', 'max:160'],
-            'content' => ['required', 'min:5', 'max:1000']
+            'content' => ['required', 'min:5', 'max:1000'],
+            'file' => ['required|pdf|max:2048', 'file']
         ];
     }
 }

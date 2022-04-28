@@ -13,8 +13,8 @@
 
   <div class="container principal">
       <div style="margin-left: 5%; margin-top: 20px;">
-      
-      <form method="post" action="{{route('projetos.store')}}">
+
+      <form method="post" action="{{route('projetos.store')}}" enctype="multipart/form-data">
       @csrf
       <div class="text-info">
         <h5>Título:</h5>
@@ -77,7 +77,13 @@
         <input type="text" name="instituicao_fomento" class="dados borda">
 
         <h5>Objetivos(Gerais e Específicos):</h5>
-        <textarea type="text" name="objetivos" class="dados-area borda"></textarea><br>
+        <textarea type="text" name="objetivos" class="dados-area borda"></textarea>
+
+        <h5>Prano de Trabalho</h5>
+        <div class="custom-file arquivo">
+        <input type="file" class="custom-file-input" id="customFile" name="file">
+        <label class="custom-file-label" for="customFile">Escolher arquivo</label>
+        </div>
 
         <input type="hidden" value="{{Auth::user()->id}}" name="id_user">
 
@@ -88,7 +94,7 @@
       <div class="espaco"></div>
       </div>
     </div>
-          
+
 </section>
 
 </x-app-layout>

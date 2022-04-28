@@ -60,6 +60,11 @@
 
                 <h5 class="text-info">Objetivos(Gerais e Específicos):</h5>
                 <div class="dados borda"><p>{{$projeto->objetivos}}</p></div>
+
+                <h5 class="text-info">Objetivos(Gerais e Específicos):</h5>
+                <div class="dados borda"><a href="{{url("files/teste.pdf")}}" target="_blank">Plano de trabalho</a></div>
+
+
               </div>
 
               </form>

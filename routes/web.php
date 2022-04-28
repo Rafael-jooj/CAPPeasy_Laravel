@@ -42,12 +42,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/projetos-avaliação', [ProjetosController::class, 'projetosGerenciador'])->name('gerenciador.projetos');
 });
 
+require __DIR__.'/auth.php';
+
 // Route::get('/home', function () {
 //     return view('site.home');
 // })->middleware(['auth'])->name('site.home');
 
-
-require __DIR__.'/auth.php';
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -31,6 +31,7 @@ return new class extends Migration
             $table->integer('valor');
             $table->string('instituicao_fomento', 160);
             $table->text('objetivos');
+            $table->string('file');
             $table->timestamps();
         });
     }

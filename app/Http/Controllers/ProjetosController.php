@@ -21,9 +21,20 @@ class ProjetosController extends Controller
 
     public function store(Request $request){
 
-        $projeto = Projetos::create($request->all());
+        $user = Auth::user()->id;
+        $data = $request->all();
 
-        $projetos = Projetos::get()->where('id_user', '=', Auth::user()->id);
+        if($request->file){
+
+            $nameFile = ("plano_de_trabalho{$user}.{$request->file->getClientOriginalExtension()}");
+
+            $file = $request->file->storeAs('projects', $nameFile);
+            $data['file'] = $file;
+        }
+
+        $projeto = Projetos::create($data);
+
+        $projetos = Projetos::get()->where('id_user', '=', $user);
 
         return view('site.listaprojetos', compact('projetos'));
     }
